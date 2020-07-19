@@ -1,0 +1,28 @@
+{
+
+  "description": "Adds a page action to toggle applying CSS to pages.",
+  "manifest_version": 2,
+  "name": "chain",
+  "version": "1.0",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/apply-css",
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [{
+      "all_frames": false,
+      "js": ["content_script.js"],
+      "matches": ["<all_urls>"]
+  }],
+
+  "browser_action": {
+    "browser_style": true
+  },
+  
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ]
+
+}
